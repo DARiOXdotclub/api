@@ -1,3 +1,3 @@
 <?php
-  echo($_SERVER['HTTP_ACCEPT_LANGAUGE']);
+  echo($_SERVER['HTTP_ACCEPT_LANGUAGE']);
 ?>
