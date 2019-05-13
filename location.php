@@ -16,7 +16,6 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
     $continents = array(
         "AF" => "Africa",
         "AN" => "Antarctica",
-        "AU" => "Australia",
         "AS" => "Asia",
         "EU" => "Europe",
         "OC" => "Australia (Oceania)",
