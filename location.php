@@ -66,9 +66,14 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
 }
 
 echo ip_info($_SERVER['REMOTE_ADDR'], "Country"); 
+echo("<br>");
 echo ip_info($_SERVER['REMOTE_ADDR'], "Country Code"); 
+echo("<br>");
 echo ip_info($_SERVER['REMOTE_ADDR'], "State"); 
+echo("<br>");
 echo ip_info($_SERVER['REMOTE_ADDR'], "City"); 
+echo("<br>");
 echo ip_info($_SERVER['REMOTE_ADDR'], "Address");
+echo("<br>");
 
 ?>
