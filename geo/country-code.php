@@ -65,7 +65,6 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
     return $output;
 }
 
-echo("Country Code: ");
 echo ip_info($_SERVER['REMOTE_ADDR'], "Country Code"); 
 
 ?>
