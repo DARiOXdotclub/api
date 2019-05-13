@@ -16,6 +16,7 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
     $continents = array(
         "AF" => "Africa",
         "AN" => "Antarctica",
+        "AU" => "Australia",
         "AS" => "Asia",
         "EU" => "Europe",
         "OC" => "Australia (Oceania)",
@@ -45,19 +46,19 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
                     $output = implode(", ", array_reverse($address));
                     break;
                 case "city":
-                    $output = @$ipdat->geoplugin_city;
+                    $output = @$ipdat->"City"->geoplugin_city;
                     break;
                 case "state":
-                    $output = @$ipdat->geoplugin_regionName;
+                    $output = @$ipdat->"State"->geoplugin_regionName;
                     break;
                 case "region":
-                    $output = @$ipdat->geoplugin_regionName;
+                    $output = @$ipdat->"Region"->geoplugin_regionName;
                     break;
                 case "country":
-                    $output = @$ipdat->geoplugin_countryName;
+                    $output = @$ipdat->"Country"->geoplugin_countryName;
                     break;
                 case "countrycode":
-                    $output = @$ipdat->geoplugin_countryCode;
+                    $output = @$ipdat->"Country Code:"->geoplugin_countryCode;
                     break;
             }
         }
@@ -65,6 +66,10 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
     return $output;
 }
 
-print_r(ip_info($_SERVER['REMOTE_ADDR'], "Location"));
+echo ip_info($_SERVER['REMOTE_ADDR'], "Country"); 
+echo ip_info($_SERVER['REMOTE_ADDR'], "Country Code"); 
+echo ip_info($_SERVER['REMOTE_ADDR'], "State"); 
+echo ip_info($_SERVER['REMOTE_ADDR'], "City"); 
+echo ip_info($_SERVER['REMOTE_ADDR'], "Address");
 
 ?>
