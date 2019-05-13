@@ -46,19 +46,19 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
                     $output = implode(", ", array_reverse($address));
                     break;
                 case "city":
-                    $output = @$ipdat->"City"->geoplugin_city;
+                    $output = @$ipdat->geoplugin_city;
                     break;
                 case "state":
-                    $output = @$ipdat->"State"->geoplugin_regionName;
+                    $output = @$ipdat->geoplugin_regionName;
                     break;
                 case "region":
-                    $output = @$ipdat->"Region"->geoplugin_regionName;
+                    $output = @$ipdat->geoplugin_regionName;
                     break;
                 case "country":
-                    $output = @$ipdat->"Country"->geoplugin_countryName;
+                    $output = @$ipdat->geoplugin_countryName;
                     break;
                 case "countrycode":
-                    $output = @$ipdat->"Country Code:"->geoplugin_countryCode;
+                    $output = @$ipdat->geoplugin_countryCode;
                     break;
             }
         }
