@@ -64,19 +64,19 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
     }
     return $output;
 }
-echo "City:";
+echo "City: ";
 echo ip_info($_SERVER['REMOTE_ADDR'], "City");
 echo "<br>";
-echo "State:";
+echo "State: ";
 echo ip_info($_SERVER['REMOTE_ADDR'], "State");
 echo "<br>";
-echo "Region:";
+echo "Region: ";
 echo ip_info($_SERVER['REMOTE_ADDR'], "Region");
 echo "<br>";
-echo "Country:";
+echo "Country: ";
 echo ip_info($_SERVER['REMOTE_ADDR'], "Country");
 echo "<br>";
-echo "Country Code:";
+echo "Country Code: ";
 echo ip_info($_SERVER['REMOTE_ADDR'], "countrycode");
 echo "<br>";
 
